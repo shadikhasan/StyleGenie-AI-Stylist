@@ -31,6 +31,7 @@ INSTALLED_APPS = [
     'common',
     'accounts',
     'client',
+    'stylist',
 ]
 
 MIDDLEWARE = [

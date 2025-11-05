@@ -13,7 +13,7 @@ class ClientProfileAdmin(admin.ModelAdmin):
 
 @admin.register(WardrobeItem)
 class WardrobeItemAdmin(admin.ModelAdmin):
-    list_display = ("title", "user", "category", "color", "created_at")
+    list_display = ("title", "user__email", "category", "color", "created_at")
     list_filter = ("category", "color")
     search_fields = ("title", "user__username", "user__email")
     ordering = ("-created_at",)

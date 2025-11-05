@@ -22,16 +22,9 @@ from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 
 # Local imports
 from common.utils import get_tokens_for_user, send_password_reset_email
-
+from client.models import ClientProfile
 
 User = get_user_model()
-
-
-# Optional ClientProfile import; safe if you add later.
-try:
-    from ..models import ClientProfile
-except Exception:
-    ClientProfile = None
 
 
 class ClientRegisterSerializer(serializers.ModelSerializer):
@@ -42,12 +35,8 @@ class ClientRegisterSerializer(serializers.ModelSerializer):
 
     def create(self, validated_data):
         password = validated_data.pop("password")
-        # role=client by default; make sure your UserManager defaults role properly or set here:
         validated_data.setdefault("role", "client")
         user = User.objects.create_user(password=password, **validated_data)
-        # Create ClientProfile if available
-        if ClientProfile:
-            ClientProfile.objects.get_or_create(user=user)
         return user
 
 

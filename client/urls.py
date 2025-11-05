@@ -7,6 +7,7 @@ Client-facing routes: authentication, password management, and profile.
 from django.urls import path, include
 from rest_framework_simplejwt.views import TokenRefreshView
 from rest_framework.routers import DefaultRouter
+from client.views.stylist import StylistBrowseViewSet
 from client.views.wardrobe import WardrobeItemViewSet
 
 from client.views.auth import (
@@ -23,6 +24,7 @@ app_name = "client"
 
 router = DefaultRouter()
 router.register(r"wardrobe", WardrobeItemViewSet, basename="wardrobe")
+router.register(r"stylists", StylistBrowseViewSet, basename="client-stylists")
 
 urlpatterns = [
     # --- Auth ---

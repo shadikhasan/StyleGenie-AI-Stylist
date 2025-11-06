@@ -123,8 +123,6 @@ CELERY_TIMEZONE = TIME_ZONE
 # CORS_ALLOWED_ORIGINS = os.environ.get("CORS_ALLOWED_ORIGINS", "").split(",")
 # # Example: CORS_ALLOWED_ORIGINS=http://localhost:3000,https://myfrontend.com
 
-# Allow all origins (use carefully in prod!)
-CORS_ALLOW_ALL_ORIGINS = False
-
-# Allow cookies/authorization headers with CORS
+CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOW_CREDENTIALS = True
+

@@ -115,16 +115,16 @@ CELERY_TIMEZONE = TIME_ZONE
 
 # C O R S   &   C S R F   S E T T I N G S
 
-# CSRF trusted origins
-CSRF_TRUSTED_ORIGINS = os.environ.get("CSRF_TRUSTED_ORIGINS", "").split(",")
-# Example: CSRF_TRUSTED_ORIGINS=https://myfrontend.com,https://sub.myfrontend.com
+# # CSRF trusted origins
+# CSRF_TRUSTED_ORIGINS = os.environ.get("CSRF_TRUSTED_ORIGINS", "").split(",")
+# # Example: CSRF_TRUSTED_ORIGINS=https://myfrontend.com,https://sub.myfrontend.com
 
-# CORS allowed origins
-CORS_ALLOWED_ORIGINS = os.environ.get("CORS_ALLOWED_ORIGINS", "").split(",")
-# Example: CORS_ALLOWED_ORIGINS=http://localhost:3000,https://myfrontend.com
+# # CORS allowed origins
+# CORS_ALLOWED_ORIGINS = os.environ.get("CORS_ALLOWED_ORIGINS", "").split(",")
+# # Example: CORS_ALLOWED_ORIGINS=http://localhost:3000,https://myfrontend.com
 
 # Allow all origins (use carefully in prod!)
-CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_ALL_ORIGINS = False
 
 # Allow cookies/authorization headers with CORS
-CORS_ALLOW_CREDENTIALS = os.environ.get("CORS_ALLOW_CREDENTIALS", "True") == "True"
+CORS_ALLOW_CREDENTIALS = True

@@ -1,5 +1,5 @@
 import requests
-from typing import Dict, Any, List
+from typing import Dict, Any, List, Optional
 from django.shortcuts import get_object_or_404
 
 from accounts.models import User
@@ -15,7 +15,7 @@ AI_REC_AUTH_TOKEN = "9f8b9c2d5a63e1f60c7e3e2d98b4c4hdjahbf28d2f72afbb8a6a83f0dc3
 REQUIRED_PROFILE_FIELDS = ("gender", "skin_tone", "face_shape", "body_shape")
 
 
-def _map_skin_tone(v: str | None) -> str | None:
+def _map_skin_tone(v: Optional[str]) -> Optional[str]:
     """Convert app skin tone values to what the AI expects."""
     if not v:
         return v

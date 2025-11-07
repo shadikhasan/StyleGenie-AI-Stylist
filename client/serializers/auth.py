@@ -81,7 +81,7 @@ class ClientLoginSerializer(serializers.Serializer):
 class UserBasicSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ["id", "email", "username", "phone", "profile_picture", "role", "status"]
+        fields = ["id", "email", "username","first_name", "last_name", "phone", "profile_picture", "role", "status"]
         read_only_fields = fields
 
 class ClientProfileReadSerializer(serializers.ModelSerializer):

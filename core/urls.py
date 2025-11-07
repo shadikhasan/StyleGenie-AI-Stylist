@@ -14,6 +14,8 @@ urlpatterns = [
     path('client/', include('client.urls')),     
     path('stylist/', include('stylist.urls')),   
     
+    path('client/', include('recommendations.urls')),   
+    
     # OpenAPI schema
     path("api/schema/", SpectacularAPIView.as_view(), name="schema"),
     

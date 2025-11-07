@@ -9,4 +9,4 @@ class ClientProfileAdmin(admin.ModelAdmin):
 
 @admin.register(WardrobeItem)
 class WardrobeItemAdmin(admin.ModelAdmin):
-    list_display = ("title", "user", "category", "color", "created_at")
+    list_display = ("id", "title", "user", "category", "color", "created_at")

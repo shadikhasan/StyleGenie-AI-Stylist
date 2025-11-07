@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     'accounts',
     'client',
     'stylist',
+    'recommendations',
 ]
 
 MIDDLEWARE = [
@@ -125,4 +126,6 @@ CELERY_TIMEZONE = TIME_ZONE
 
 CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOW_CREDENTIALS = True
+
+
 

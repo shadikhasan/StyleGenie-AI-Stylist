@@ -116,9 +116,9 @@ CELERY_TIMEZONE = TIME_ZONE
 
 # C O R S   &   C S R F   S E T T I N G S
 
-# # CSRF trusted origins
-# CSRF_TRUSTED_ORIGINS = os.environ.get("CSRF_TRUSTED_ORIGINS", "").split(",")
-# # Example: CSRF_TRUSTED_ORIGINS=https://myfrontend.com,https://sub.myfrontend.com
+# CSRF trusted origins
+CSRF_TRUSTED_ORIGINS = os.environ.get("CSRF_TRUSTED_ORIGINS", "").split(",")
+# Example: CSRF_TRUSTED_ORIGINS=https://myfrontend.com,https://sub.myfrontend.com
 
 # # CORS allowed origins
 # CORS_ALLOWED_ORIGINS = os.environ.get("CORS_ALLOWED_ORIGINS", "").split(",")

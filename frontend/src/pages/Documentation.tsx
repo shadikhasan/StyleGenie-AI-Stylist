@@ -173,7 +173,7 @@ const credentialEntries: CredentialEntry[] = [
   {
     key: "client-staging",
     role: "Client / Normal User",
-    environment: "Frontend / Backend",
+    environment: "Frontend",
     email: "testuser@gmail.com",
     password: "Test@1234",
     notes:
@@ -182,7 +182,7 @@ const credentialEntries: CredentialEntry[] = [
   {
     key: "stylist-staging",
     role: "Stylist",
-    environment: "Frontend / Backend",
+    environment: "Frontend",
     email: "hasnain@gmail.com",
     password: "has@1234",
     notes: "Covers stylist availability, bookings, and payout flows.",
@@ -458,7 +458,7 @@ const ChecklistItemCard = ({ item }: { item: ChecklistItem }) => {
 
 const CredentialsSection = ({ entries }: { entries: CredentialEntry[] }) => (
   <section>
-    <Card className="shadow-medium">
+    <Card className="shadow-medium bg-primary/15 border-primary/50">
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
           <ShieldCheck className="h-5 w-5 text-primary" />
@@ -484,7 +484,7 @@ const CredentialCard = ({ entry }: { entry: CredentialEntry }) => (
         <h3 className="text-lg font-semibold">{entry.role}</h3>
         <p className="text-sm text-muted-foreground">{entry.notes}</p>
       </div>
-      <Badge variant="outline">{entry.environment}</Badge>
+      <Badge className="bg-primary text-white">{entry.environment}</Badge>
     </div>
 
     <div className="grid gap-3 sm:grid-cols-2 text-sm">

@@ -308,12 +308,12 @@ const HeroSection = ({ links }: HeroSectionProps) => (
           <ShieldCheck className="h-4 w-4 text-primary" />
           <span>Live API base:</span>
           <a
-            href={API_BASE_URL}
+            href="https://stylegenie-backend.up.railway.app/"
             target="_blank"
             rel="noopener noreferrer"
             className="rounded-md border border-border bg-background/60 px-2 py-1 font-mono text-xs hover:border-primary/50 hover:text-primary transition-colors"
           >
-            {API_BASE_URL}
+            https://stylegenie-backend.up.railway.app/
           </a>
         </div>
 

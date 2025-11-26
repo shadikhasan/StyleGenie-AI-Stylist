@@ -1,4 +1,4 @@
-# StyleGenie
+# StyleGenie - AI Stylist
 ## Live Demo: https://style-genie-frontend.vercel.app
 
 AI-assisted personal styling platform that combines a Django REST API with a modern React/Vite frontend. It digitizes a client’s wardrobe, applies AI-driven outfit guidance, and connects clients with expert stylists for bookings, chat, and paid sessions.
